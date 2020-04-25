@@ -44,7 +44,7 @@ AT = tf.sparse.SparseTensor(index, val, shape)
 # AT = tf.cast(AT, tf.float32)
 theta=np.linspace(0, 180, Aangles, endpoint=False)
 
-pre='./512x512/weights'
+pre='./'
 ckpt=[pre+'/red_cnn',pre+'/DD_NET',pre+'/fbpconv',
       pre+'/our_model_1_lambda=0.5']
 j=2
@@ -105,7 +105,7 @@ def evaluate(j,f_noisy,vx,batch,shape,Model):
        return prediction
 
 def saveimages(prediction,vx,vy,j):
-    pre='./512x512/pic/'
+    pre='./pic/'
     name=[pre+'red_cnn/',pre+'DD_NET/',pre+'FBP_conv/',pre+'our/']
     L=len(prediction)
     for i in range(L):
@@ -116,7 +116,7 @@ def saveimages(prediction,vx,vy,j):
 
 
 def savepsnr(pp,qq,j):
-    pre = './512x512/psnr/'
+    pre = './psnr/'
     name = [pre + 'red_cnn', pre + 'DD_NET', pre + 'FBP_conv', pre + 'our',pre+'our']
     np.savez(name[j],psnr=pp,ssim=qq)
 
