@@ -57,7 +57,7 @@ Model=[net0.make_model(batch),net1.make_model(batch),net2.make_model(batch),
 
 udir = "./test/"
 
-data = np.load('train' + '_fan2para.npz')
+data = np.load('test' + '_fan2para.npz')
 vx=data['ini_u'].astype('float32')
 # f=np.load(udir+ '/f,angle=' + str(superangles) + '_no_scale__0.5.npy')
 f_noisy_img = data['f_noisy'].astype('float32')
@@ -103,7 +103,7 @@ def evaluate(j,f_noisy,vx,batch,shape,Model):
        return prediction
 
 def saveimages(prediction,vx,vy,j):
-    pre='./512x512/pic/'
+    pre='./pic/'
     name=[pre+'red_cnn/',pre+'DD_NET/',pre+'FBP_conv/',pre+'our/']
     L=len(prediction)
     for i in range(L):
@@ -114,7 +114,7 @@ def saveimages(prediction,vx,vy,j):
 
 
 def savepsnr(pp,qq,j):
-    pre = './512x512/psnr/'
+    pre = './psnr/'
     name = [pre + 'red_cnn', pre + 'DD_NET', pre + 'FBP_conv', pre + 'our',pre+'our']
     np.savez(name[j],psnr=pp,ssim=qq)
 
