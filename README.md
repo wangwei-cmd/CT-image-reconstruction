@@ -1,4 +1,4 @@
 # CT-image-reconstruction
 The code implemented the CT reconstruction network described in our peer-reviwed work
-"A end-to-end deep network mapping sparse sinograms to  CT images" submited to IEEE TIP.
+"An end-to-end deep network for reconstructing CT images directly from sparse sinograms" submited to IEEE TIP.
 The code was written based on  tensorflow2.0.
