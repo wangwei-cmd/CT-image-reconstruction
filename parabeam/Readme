@@ -2,6 +2,6 @@ To demonstrate our network, run testnew.py
 
 To train our model,
 run make_ini.py to prepare the training data where the size of input CT images= [L,512,512,1]. 
-The sparse matrix AT and input sinograms for test can be downloaded from 
+
 Due to the license limitation, we can not provide the AAPM CT images as  labels. 
-After producing the training data, run newmodel.py to begin train the model.
+After producing the training data, run newmodel.py to begin training the model.
