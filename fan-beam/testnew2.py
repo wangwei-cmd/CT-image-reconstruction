@@ -29,7 +29,8 @@ def interp(f,xp,x):
         f_interp[:, :, j, :] = f_img[:, :, -1, :]
     return f_interp
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-AT = np.load('AT_fan_512x512_theta=0_0.5_175.5_alpha=-40:0.05:40_beta=0:1:359_R=600.npz')
+#AT = np.load('AT_fan_512x512_theta=0_0.5_175.5_alpha=-40:0.05:40_beta=0:1:359_R=600.npz')
+AT = np.load('AT_fan_512x512_theta=0_0.5_175.5_alpha=-40_0.05_40_beta=0_1_359_R=600.npz')
 val = AT['val'].astype('float32')
 index = AT['index']
 shape = AT['shape']
@@ -74,13 +75,13 @@ plt.figure()
 plt.imshow(prediction[ii,:,:,0],cmap='gray')
 plt.show()
 
-vy=data['u'].astype('float32')
-vy=vy[0:L]
-vy=tf.cast(vy,tf.float32)
-pp=tf.image.psnr(tf.cast(prediction,tf.float32),vy,tf.reduce_max(prediction)).numpy()
-qq=tf.image.ssim(tf.cast(prediction,tf.float32),vy,tf.reduce_max(prediction)).numpy()
-print('average psnr:',tf.reduce_mean(pp).numpy())
-print('average ssim:',tf.reduce_mean(qq).numpy())
+# vy=data['u'].astype('float32')
+# vy=vy[0:L]
+# vy=tf.cast(vy,tf.float32)
+# pp=tf.image.psnr(tf.cast(prediction,tf.float32),vy,tf.reduce_max(prediction)).numpy()
+# qq=tf.image.ssim(tf.cast(prediction,tf.float32),vy,tf.reduce_max(prediction)).numpy()
+# print('average psnr:',tf.reduce_mean(pp).numpy())
+# print('average ssim:',tf.reduce_mean(qq).numpy())
 
 
 
