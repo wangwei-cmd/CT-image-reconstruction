@@ -1,6 +1,6 @@
 
 run make_ini.py to prepare the training data. 
-The sparse matrix can be downloaded from 
-Due to the license limitation, we can not provide the AAPM data. any CT images of size 512*512 can be used as the labels and   generate the training data.
+The sparse matrix AT and input sinograms for test can be downloaded from 
+Due to the license limitation, we can not provide the AAPM data for training labels. 
 
 To demonstrate our network, run test_model_90.py
