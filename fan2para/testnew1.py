@@ -39,7 +39,7 @@ AT = tf.sparse.SparseTensor(index, val, shape)
 # AT = tf.cast(AT, tf.float32)
 theta=np.linspace(0, 180, Aangles, endpoint=False)
 Model=net.make_model_3(AT,(725, 180),(512, 512))
-ckpt='./512x512/weights'+'/new1_model_lambda=0.5'
+ckpt='./weights'+'/new1_model_lambda=0.5'
 batch=5
 data = np.load('test' + '_fan2para.npz')
 f_noisy_img = data['f_noisy'].astype('float32')
