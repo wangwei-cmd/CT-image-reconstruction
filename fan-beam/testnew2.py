@@ -50,7 +50,7 @@ alpha = alpha.astype('float32')
 Model=net.make_model_3(AT, alpha, w_c, s_shape, out_size)
 data=np.load('test'+'_fan_data.npz')
 f_noisy_img=data['sin_fan_ini'].astype('float32')
-ckpt='./512x512/fan-beam/weights'+'/new2_model_lambda=0.5'
+ckpt='./fan-beam/weights'+'/new2_model_lambda=0.5'
 L=500
 f_noisy=f_noisy_img[0:L]
 def inimodel(f_noisy,Model,ckpt=ckpt):
