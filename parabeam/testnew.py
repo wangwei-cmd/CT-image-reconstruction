@@ -39,7 +39,7 @@ shape = AT['name3']
 AT = tf.sparse.SparseTensor(index, val, shape)
 # AT = tf.cast(AT, tf.float32)
 theta=np.linspace(0, 180, Aangles, endpoint=False)
-ckpt='./512x512/weights'+'/new_model_lambda=0.5'
+ckpt='./weights'+'/new_model_lambda=0.5'
 batch=5
 Model=net4.make_model_3(AT,(725, 180),(512, 512))
 udir = "./test/"
