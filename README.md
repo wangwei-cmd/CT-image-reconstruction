@@ -3,5 +3,5 @@ The codes implement the CT reconstruction networks described in our peer-reviwed
 "An end-to-end deep network for reconstructing CT images directly from sparse sinograms" submited to IEEE TCI.
 The code was written based on  tensorflow2.0.
 
-The sparse matrix AT and inputted sinograms can be downloaded at https://bmitacnz2-my.sharepoint.com/:f:/g/personal/b0009_onedrive_pet/EjA8T4HBF_hIlI4A5TiH-icBonlrZrW5VWtZ4KcHwug38A?e=sbSsMX or the baiduyun disk link: https://pan.baidu.com/s/1Vey42hWPz-myxnHZOZFnVQ 提取码: jaj2.
+The sparse matrix AT and inputted sinograms can be downloaded from the baiduyun link: https://pan.baidu.com/s/1Vey42hWPz-myxnHZOZFnVQ code: jaj2.
 
